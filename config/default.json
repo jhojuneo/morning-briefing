@@ -1,0 +1,87 @@
+{
+  "schedule": {
+    "daily": "06:00",
+    "weekly_digest": "sunday",
+    "timezone": "America/Sao_Paulo"
+  },
+  "projects_root": "~/Desktop/Sites e sistemas",
+  "memory_root": "~/.claude/projects/-Users-jhoncarvalho/memory",
+  "session_data": "~/.claude/session-data",
+  "instincts_root": "~/.claude/homunculus",
+  "output": {
+    "pdf_dir": "~/Desktop/Briefings",
+    "audio_enabled": false,
+    "audio_voice": "macOS",
+    "audio_dir": "~/Desktop/Briefings/audio"
+  },
+  "notifications": {
+    "macos": true,
+    "telegram": {
+      "enabled": true,
+      "bot_token": "",
+      "chat_id": ""
+    },
+    "whatsapp": {
+      "enabled": false,
+      "evolution_api_url": "",
+      "instance": "",
+      "target_number": ""
+    }
+  },
+  "clients": [
+    {
+      "name": "VR Concept",
+      "project_dir": "medico-ads-proposta-digital",
+      "memory_file": "vr-concept-oto.md",
+      "ads_platform": "meta",
+      "monthly_budget": null
+    },
+    {
+      "name": "Black One Limo",
+      "memory_file": "black-one-limo.md",
+      "ads_platform": "google",
+      "monthly_budget": null
+    },
+    {
+      "name": "Bruno PSI",
+      "memory_file": "bruno-psi.md",
+      "ads_platform": "google",
+      "monthly_budget": 1000
+    },
+    {
+      "name": "Implantar Clinica",
+      "memory_file": "implantar-clinica.md",
+      "ads_platform": "google",
+      "monthly_budget": 600
+    },
+    {
+      "name": "Distribuidora Caixas d'Agua",
+      "memory_file": "distribuidora-caixas-dagua.md",
+      "ads_platform": null,
+      "monthly_budget": null
+    },
+    {
+      "name": "Utimix Importadora",
+      "memory_file": "utimix-importadora.md",
+      "ads_platform": null,
+      "monthly_budget": null
+    }
+  ],
+  "research_topics": [
+    "Google Ads updates",
+    "Meta Ads updates",
+    "landing page conversion optimization",
+    "React + Vite + shadcn-ui",
+    "Claude Code skills"
+  ],
+  "financial": {
+    "enabled": true,
+    "data_dir": "~/Library/Application Support/Claude/local-agent-mode-sessions"
+  },
+  "self_improvement": {
+    "enabled": true,
+    "min_feedback_score": 3,
+    "auto_evolve_instincts": true,
+    "weekly_meta_analysis": true
+  }
+}
