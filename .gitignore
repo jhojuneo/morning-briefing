@@ -1,0 +1,19 @@
+# History contains personal briefing data
+history/*.json
+
+# Logs
+logs/*.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Config with real tokens (keep default.json as template)
+config/my-config.json
+config/production.json

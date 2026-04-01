@@ -1,0 +1,54 @@
+{
+  "schedule": {
+    "daily": "06:00",
+    "weekly_digest": "sunday",
+    "timezone": "America/Sao_Paulo"
+  },
+  "projects_root": "~/Projects",
+  "memory_root": "~/.claude/projects/-Users-yourname/memory",
+  "session_data": "~/.claude/session-data",
+  "instincts_root": "~/.claude/homunculus",
+  "output": {
+    "pdf_dir": "~/Desktop/Briefings",
+    "audio_enabled": false,
+    "audio_voice": "macOS",
+    "audio_dir": "~/Desktop/Briefings/audio"
+  },
+  "notifications": {
+    "macos": true,
+    "telegram": {
+      "enabled": false,
+      "bot_token": "YOUR_BOT_TOKEN_HERE",
+      "chat_id": "YOUR_CHAT_ID_HERE"
+    },
+    "whatsapp": {
+      "enabled": false,
+      "evolution_api_url": "https://your-evolution-api.com",
+      "instance": "default",
+      "target_number": "5511999999999"
+    }
+  },
+  "clients": [
+    {
+      "name": "Example Client",
+      "project_dir": "example-project",
+      "memory_file": "example-client.md",
+      "ads_platform": null,
+      "monthly_budget": null
+    }
+  ],
+  "research_topics": [
+    "Your main technology",
+    "Your industry news"
+  ],
+  "financial": {
+    "enabled": false,
+    "data_dir": ""
+  },
+  "self_improvement": {
+    "enabled": true,
+    "min_feedback_score": 3,
+    "auto_evolve_instincts": true,
+    "weekly_meta_analysis": true
+  }
+}
