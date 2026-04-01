@@ -66,62 +66,39 @@ Every day at 6AM (configurable), the system launches 4 collector agents in paral
 
 ---
 
-## Quick Start
-
-### 1. Install
+## Quick Start (2 commands)
 
 ```bash
+# 1. Clone
 git clone https://github.com/jhojuneo/morning-briefing.git ~/.claude/skills/morning-briefing
+
+# 2. Run the setup wizard (guides you through everything)
+python3 ~/.claude/skills/morning-briefing/scripts/setup.py
 ```
 
-### 2. Configure
+The wizard will:
+- Check requirements (Python, Claude CLI, fpdf2)
+- Ask about your projects and clients
+- Configure Telegram/WhatsApp notifications (optional)
+- Set your preferred schedule
+- Choose research topics
+- Install the `/briefing` slash command
+- Activate the daily schedule
 
-```bash
-# Copy the example config and edit with your data
-cp ~/.claude/skills/morning-briefing/config/default.json ~/.claude/skills/morning-briefing/config/my-config.json
-```
+**That's it. Tomorrow morning you'll have your first briefing.**
 
-Edit `config/default.json` with:
-- Your project directories
-- Client names and budgets
-- Notification channels (Telegram, WhatsApp)
-- Research topics relevant to your work
+### Manual Setup (if you prefer)
 
-### 3. Install the slash command
+<details>
+<summary>Click to expand manual steps</summary>
 
-```bash
-cp ~/.claude/skills/morning-briefing/commands/briefing.md ~/.claude/commands/briefing.md
-```
+1. Edit `config/default.json` with your data
+2. Copy command: `cp ~/.claude/skills/morning-briefing/commands/briefing.md ~/.claude/commands/`
+3. **macOS:** `cp com.jhon.morning-briefing.plist ~/Library/LaunchAgents/ && launchctl load ~/Library/LaunchAgents/com.jhon.morning-briefing.plist`
+4. **Linux:** `crontab -e` then add `0 6 * * * python3 ~/.claude/skills/morning-briefing/scripts/briefing.py`
+5. Test: `python3 scripts/briefing.py --test`
 
-### 4. Schedule (optional)
-
-**macOS (launchd):**
-```bash
-mkdir -p ~/.claude/skills/morning-briefing/logs
-cp ~/.claude/skills/morning-briefing/com.jhon.morning-briefing.plist ~/Library/LaunchAgents/com.morning-briefing.plist
-
-# Edit the plist to change username/paths if needed
-# Then load it:
-launchctl load ~/Library/LaunchAgents/com.morning-briefing.plist
-```
-
-**Linux (cron):**
-```bash
-# Add to crontab:
-0 6 * * * /usr/bin/python3 ~/.claude/skills/morning-briefing/scripts/briefing.py
-```
-
-### 5. Test it
-
-Inside Claude Code:
-```
-/briefing
-```
-
-Or from terminal:
-```bash
-python3 ~/.claude/skills/morning-briefing/scripts/briefing.py --test
-```
+</details>
 
 ---
 
